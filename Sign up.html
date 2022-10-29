@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+    <style>
+        input[type=text] {
+  width: 45%;
+  padding: 15px 0;
+  margin-left: 347.325px;
+  margin-right: 347.325px;
+  box-sizing: border-box;
+}
+body{
+    background: url(https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg);
+}
+input[type=submit]{
+    background: #1abc9c;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+    width: 25%;
+    color: white;
+    margin-left:0%;
+    margin-right: 40%;
+    margin-top: 10px;
+}
+p{
+    margin-left: 41%;
+}
+p a{
+ text-decoration: none;
+}
+p a:hover{
+    color: red;
+}
+select{
+    width: 15%;
+    margin-top: 5px;
+}
+form{
+    top: 0;
+}
+</style>
+<script>
+            function GEEKFORGEEKS() {
+                var name =
+                    document.forms.RegForm.Name.value;
+                var email =
+                    document.forms.RegForm.EMail.value;
+                var phone =
+                    document.forms.RegForm.Telephone.value;
+                var what =
+                    document.forms.RegForm.Subject.value;
+                var password =
+                    document.forms.RegForm.Password.value;
+                var address =
+                    document.forms.RegForm.Address.value;
+                var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+                var regPhone=/^\d{10}$/;                                        // Javascript reGex for Phone Number validation.
+                var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+ 
+                if (name == "" || regName.test(name)) {
+                    window.alert("Xin hãy điền tên đăng nhập");
+                    name.focus();
+                    return false;
+                }
+                 if (password == "") {
+                    alert("Xin hãy nhập mật khẩu");
+                    password.focus();
+                    return false;
+                }
+                if(password.length <6){
+                    alert("Mật khẩu phải dài hơn 6 chữ số");
+                    password.focus();
+                    return false;
+                }
+                if (address == "") {
+                    window.alert("Xin hãy điền địa chỉ gmail");
+                    address.focus();
+                    return false;
+                }
+                if (email == "" || !regEmail.test(email)) {
+                    window.alert("Địa chỉ gmail sai");
+                    email.focus();
+                    return false;
+                }
+                 if (phone == "" || !regPhone.test(phone)) {
+                    alert("Số điện thoại không hợp lệ");
+                    phone.focus();
+                    return false;
+                }
+                if (what.selectedIndex == -1) {
+                    alert("Xin hãy chọn giới tính");
+                    what.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        </head>
+<body>
+    <h1 style="margin-left: 44%;color: #555;margin-top: 5cm;">Sign up</h1>
+        <form name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">
+             <input type="text"
+                            size="65" name="Name" placeholder="     Username"/>
+                            <input type="text"
+                        size="65" name="Password" placeholder="     Password"/>
+                        <input type="text"
+                            size="65" name="Address" placeholder="     Địa chỉ"/>
+                            <input type="text"
+                            size="65" name="EMail" placeholder="     Gmail" />
+                            <input type="text"
+                        size="65" name="Telephone" placeholder="     Số điện thoại"/>       
+<p>Giới tính: 
+                <select type="text" value="" name="Subject">
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                    <option>Không muốn trả lời</option>
+                </select>
+            </p>
+<p>
+                <input type="submit"
+                    value="Submit" name="Submit" />
+            </p>
+ 
+        </form>
+        <p>Đã có tài khoản? <a href="C:\Users\Bach Nguyen\Desktop\web\Sản phẩm cuối khóa\Login page.html">Đăng nhập</a></p>
+        <a href="C:\Users\Bach Nguyen\Desktop\web\Sản phẩm cuối khóa\Home.html" style="text-decoration: none;margin-left:44% ;">Trở lại trang chủ</a>
+</body> 

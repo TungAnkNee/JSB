@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+    <style>
+        input[type=text] {
+  width: 45%;
+  padding: 15px 0;
+  margin-left: 347.325px;
+  margin-right: 347.325px;
+  box-sizing: border-box;
+}
+body{
+    background: url(https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg);
+}
+input[type=submit]{
+    background: #1abc9c;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+    width: 15%;
+    color: white;
+    margin-left:41%;
+    margin-right: 40%;
+    margin-top: 10px;
+}
+p{
+    margin-left: 40.25%;
+}
+p a{
+ text-decoration: none;
+}
+p a:hover{
+    color: red;
+}
+select{
+    width: 15%;
+    margin-top: 5px;
+}
+form{
+    top: 0;
+}
+</style>
+<script>
+            function GEEKFORGEEKS() {
+                var name =
+                    document.forms.RegForm.Name.value;
+                var password =
+                    document.forms.RegForm.Password.value;                                     
+                var regName = /\d+$/g;                                    
+ 
+                if (name == "" || regName.test(name)) {
+                    window.alert("Xin hãy điền tên đăng nhập");
+                    name.focus();
+                    return false;
+                }
+                 if (password == "") {
+                    alert("Xin hãy nhập mật khẩu");
+                    password.focus();
+                    return false;
+                }
+                if(password.length <6){
+                    alert("Mật khẩu phải dài hơn 6 chữ số");
+                    password.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        </head>
+<body>
+    <h1 style="margin-left: 45%;color: #555;margin-top: 5cm;">Login</h1>
+        <form name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">
+             <input type="text"
+                            size="65" name="Name" placeholder="     Username"/>
+                            <input type="text"
+                        size="65" name="Password" placeholder="     Password"/>
+                            <input type="submit"
+                                value="Submit" name="Submit" />
+        </form>
+        <p>Chưa có tài khoản? <a href="C:\Users\Bach Nguyen\Desktop\web\Sản phẩm cuối khóa\Sign up.html">Đăng kí ngay</a></p>
+        <a href="C:\Users\Bach Nguyen\Desktop\web\Sản phẩm cuối khóa\Home.html" style="text-decoration: none;margin-left:44% ;">Trở lại trang chủ</a>
+</body> 
